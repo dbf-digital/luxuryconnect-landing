@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="L'agent commercial IA pour fondateurs B2B premium. Drafts personnalisés multi-canaux, validation humaine, apprend votre voix.">
+<title>LuxuryConnect — Votre commercial IA. Vous restez maître.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--bg-soft:#141414;--bg-card:#1a1a1a;--text:#f5f1eb;--text-dim:#a8a39a;--accent:#c9a961;--accent-dim:#8a7340;--border:#2a2826;--serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.container{max-width:1180px;margin:0 auto;padding:0 2rem}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-0.02em;line-height:1.1}
+h1{font-size:clamp(2.5rem,6vw,4.5rem)}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:1.5rem}
+h3{font-size:1.5rem;margin-bottom:0.75rem}
+p{color:var(--text-dim);font-size:1.05rem}
+a{color:inherit;text-decoration:none}
+.accent{color:var(--accent)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);background:rgba(10,10,10,0.7);border-bottom:1px solid var(--border)}
+nav .container{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;padding-bottom:1.25rem}
+.logo{font-family:var(--serif);font-size:1.35rem;font-weight:400;letter-spacing:-0.01em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2.5rem;align-items:center;font-size:0.92rem}
+.nav-links a{color:var(--text-dim);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-block;padding:0.85rem 1.75rem;border-radius:2px;font-size:0.95rem;font-weight:500;transition:all 0.25s;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:var(--bg)}
+.btn-primary:hover{background:#d8b870;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.hero{padding:12rem 0 8rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,97,0.08),transparent 70%);pointer-events:none}
+.hero-content{position:relative;max-width:850px}
+.eyebrow{color:var(--accent);font-size:0.85rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:2rem;display:inline-block}
+.hero h1{margin-bottom:2rem}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--accent)}
+.hero-sub{font-size:1.25rem;color:var(--text-dim);max-width:620px;margin-bottom:3rem;line-height:1.5}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-meta{margin-top:4rem;display:flex;gap:3rem;flex-wrap:wrap;padding-top:3rem;border-top:1px solid var(--border)}
+.hero-meta .num{font-family:var(--serif);font-size:2rem;color:var(--accent)}
+.hero-meta .lbl{font-size:0.85rem;color:var(--text-dim)}
+section{padding:7rem 0}
+.section-tag{color:var(--accent);font-size:0.82rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem}
+.section-head{max-width:700px;margin-bottom:4rem}
+.section-head p{font-size:1.15rem;margin-top:1rem}
+.problem{background:var(--bg-soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.problem-card{padding:2.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px}
+.problem-card .icon{font-family:var(--serif);font-size:2.5rem;color:var(--accent);margin-bottom:1rem;display:block}
+.problem-card h3{color:var(--text)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:3rem}
+.step{position:relative;padding-top:2rem}
+.step-num{font-family:var(--serif);font-size:4rem;color:var(--accent);line-height:1;margin-bottom:1.5rem;display:block;opacity:0.7}
+.features{background:var(--bg-soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.feature{padding:2.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;transition:all 0.3s}
+.feature:hover{border-color:var(--accent-dim);transform:translateY(-2px)}
+.feature h3{color:var(--text);display:flex;align-items:center;gap:0.75rem}
+.feature h3::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.voice-section{padding:7rem 0}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.voice-text h2 em{font-style:italic;color:var(--accent)}
+.voice-text p{margin-top:1.5rem;font-size:1.1rem}
+.voice-stat{margin-top:3rem;padding:2rem;background:var(--bg-card);border-left:3px solid var(--accent);border-radius:0 4px 4px 0}
+.voice-stat .num{font-family:var(--serif);font-size:2.5rem;color:var(--accent);display:block;line-height:1;margin-bottom:0.5rem}
+.voice-mockup{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:2rem}
+.voice-mockup .label{color:var(--text-dim);font-size:0.8rem;margin-bottom:0.5rem;letter-spacing:0.1em;text-transform:uppercase}
+.voice-msg{padding:1.25rem;background:rgba(255,255,255,0.02);border-radius:4px;margin-bottom:1.5rem;color:var(--text);line-height:1.6;font-size:0.95rem}
+.voice-actions{display:flex;gap:0.75rem}
+.voice-btn{padding:0.5rem 1rem;background:var(--bg);border:1px solid var(--border);color:var(--text-dim);font-size:0.85rem;border-radius:3px}
+.voice-btn-primary{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:500}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.price-card{padding:3rem 2.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;position:relative}
+.price-card.featured{border-color:var(--accent);background:linear-gradient(180deg,rgba(201,169,97,0.05),transparent)}
+.price-card .badge{position:absolute;top:-12px;left:2.5rem;background:var(--accent);color:var(--bg);padding:0.25rem 0.75rem;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px}
+.price-card h3{color:var(--text);margin-bottom:0.5rem}
+.price-card .tagline{color:var(--text-dim);font-size:0.95rem;margin-bottom:2rem}
+.price-card .price{font-family:var(--serif);font-size:3rem;color:var(--text);margin-bottom:0.25rem}
+.price-card .price span{color:var(--text-dim);font-size:1rem;font-family:var(--sans)}
+.price-card .annual{color:var(--accent);font-size:0.9rem;margin-bottom:2rem}
+.price-card ul{list-style:none;margin-bottom:2rem}
+.price-card li{padding:0.6rem 0;color:var(--text-dim);font-size:0.95rem;border-bottom:1px solid var(--border);display:flex;gap:0.6rem}
+.price-card li::before{content:'→';color:var(--accent);flex-shrink:0}
+.price-card li:last-child{border-bottom:none}
+.price-card .btn{width:100%;text-align:center}
+.faq{background:var(--bg-soft);border-top:1px solid var(--border)}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.75rem 0}
+.faq-q{font-family:var(--serif);font-size:1.25rem;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q::after{content:'+';color:var(--accent);font-size:1.5rem;transition:transform 0.2s}
+details[open] .faq-q::after{content:'−'}
+.faq-a{padding-top:1rem;color:var(--text-dim);font-size:1rem;line-height:1.7}
+.final-cta{text-align:center;padding:10rem 0;position:relative}
+.final-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(201,169,97,0.06),transparent 70%);pointer-events:none}
+.final-cta h2{font-size:clamp(2.5rem,5vw,3.5rem);margin-bottom:1.5rem}
+.final-cta p{font-size:1.2rem;max-width:580px;margin:0 auto 3rem}
+.final-cta .btn{padding:1.1rem 2.5rem;font-size:1rem}
+footer{padding:4rem 0 3rem;border-top:1px solid var(--border);color:var(--text-dim);font-size:0.9rem}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+footer a{color:var(--text-dim);transition:color 0.2s}
+footer a:hover{color:var(--text)}
+.footer-links{display:flex;gap:2rem}
+@media(max-width:860px){.nav-links{display:none}.hero{padding:9rem 0 5rem}.voice-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.features-grid{grid-template-columns:1fr}.hero-meta{gap:1.5rem}}
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+<div class="container">
+<a href="#" class="logo">Luxury<span>Connect</span></a>
+<div class="nav-links">
+<a href="#how">Comment ça marche</a>
+<a href="#features">Fonctionnalités</a>
+<a href="#pricing">Tarifs</a>
+<a href="#demo" class="btn btn-primary">Réserver une démo</a>
+</div>
+</div>
+</nav>
+<section class="hero">
+<div class="container hero-content">
+<span class="eyebrow">Pour fondateurs B2B premium</span>
+<h1>Votre commercial IA.<br><em>Vous restez maître.</em></h1>
+<p class="hero-sub">L'agent qui drafte vos messages de prospection multi-canaux. Vous validez d'un clic. Il apprend votre voix au fil du temps, jusqu'à ne plus se distinguer de la vôtre.</p>
+<div class="hero-ctas">
+<a href="#demo" class="btn btn-primary">Réserver une démo de 15 min</a>
+<a href="#how" class="btn btn-ghost">Voir le produit</a>
+</div>
+<div class="hero-meta">
+<div><div class="num">5</div><div class="lbl">Canaux orchestrés</div></div>
+<div><div class="num">85%</div><div class="lbl">Approbation sans édition après 30 jours</div></div>
+<div><div class="num">12h</div><div class="lbl">Économisées par semaine</div></div>
+<div><div class="num">0</div><div class="lbl">Compte LinkedIn banni</div></div>
+</div>
+</div>
+</section>
+<section class="problem" id="problem">
+<div class="container">
+<div class="section-head reveal">
+<div class="section-tag">Le problème</div>
+<h2>La prospection vous mange<br>le temps qui devrait construire votre produit.</h2>
+<p>Tous les fondateurs B2B premium connaissent ce moment : il est 22h, vous écrivez encore des messages LinkedIn personnalisés, et demain vous deviez avancer sur le produit.</p>
+</div>
+<div class="problem-grid">
+<div class="problem-card reveal"><span class="icon">01</span><h3>Apollo trouve les leads</h3><p>...mais c'est toujours vous qui écrivez chaque message. Apollo, Lemlist, et les autres s'arrêtent à la porte. Vous frappez encore à la main.</p></div>
+<div class="problem-card reveal"><span class="icon">02</span><h3>L'IA générique tue la marque</h3><p>Les outils SDR commodity envoient le même message à tout le monde. Vos prospects premium reconnaissent le copier-coller IA en trois secondes. Et ils ne répondent plus.</p></div>
+<div class="problem-card reveal"><span class="icon">03</span><h3>L'automation casse les comptes</h3><p>40% des comptes LinkedIn utilisant des outils d'automation non-conformes ont été bannis au premier trimestre. Trois ans de réseau effacés en une nuit.</p></div>
+</div>
+</div>
+</section>
+<section id="how">
+<div class="container">
+<div class="section-head reveal">
+<div class="section-tag">La solution</div>
+<h2>Une boucle qui s'affine<br>chaque jour à votre image.</h2>
+<p>Pas de fire-and-forget. Pas d'IA en roue libre. Un agent qui propose, vous qui décidez, et qui apprend à chaque correction.</p>
+</div>
+<div class="steps">
+<div class="step reveal"><span class="step-num">01</span><h3>L'agent drafte</h3><p>Chaque matin, votre file contient les messages prêts pour vos prospects qualifiés. Personnalisés au prénom, au poste, à la levée de fonds récente. Dans votre ton.</p></div>
+<div class="step reveal"><span class="step-num">02</span><h3>Vous validez</h3><p>12 minutes. Approuver, éditer, skipper. Chaque édition devient une donnée d'entraînement. La prochaine fois, l'agent fera mieux. Vous restez le créatif, il devient l'exécutant.</p></div>
+<div class="step reveal"><span class="step-num">03</span><h3>L'agent envoie et écoute</h3><p>Email envoyé. LinkedIn préparé en mode copier-coller sécurisé. Twitter via API officielle. Quand un prospect répond, l'agent classifie et drafte la réponse.</p></div>
+</div>
+</div>
+</section>
+<section class="features" id="features">
+<div class="container">
+<div class="section-head reveal"><div class="section-tag">Ce qui change la donne</div><h2>Conçu pour ceux qui<br>refusent l'IA générique.</h2></div>
+<div class="features-grid">
+<div class="feature reveal"><h3>Apprentissage de votre voix</h3><p>Trois couches d'entraînement : votre persona statique, vos 10 derniers messages approuvés en few-shot, et un retrieval sémantique pour les cas similaires. Au bout d'un mois, 85% de vos drafts passent sans édition.</p></div>
+<div class="feature reveal"><h3>LinkedIn en mode sécurisé</h3><p>Aucun mot de passe stocké. L'agent prépare le message, vous cliquez "Copier + Ouvrir", vous collez dans votre propre navigateur. Aucun risque de ban.</p></div>
+<div class="feature reveal"><h3>Multi-canal orchestré</h3><p>Email, LinkedIn, Twitter, Instagram, TikTok. Une séquence cohérente sur tous les canaux, sans que vous ayez à orchestrer manuellement.</p></div>
+<div class="feature reveal"><h3>Détection et réponse aux objections</h3><p>Les réponses entrantes sont classifiées en temps réel : intéressé, objection prix, pas le bon moment, hors-cible. Chaque catégorie a sa réponse draftée.</p></div>
+<div class="feature reveal"><h3>Qualification avant prospection</h3><p>Vos leads Apollo passent par un scoring IA contre votre ICP avant d'entrer en séquence. Vous prospectez 60 leads triés, pas 200 mal ciblés.</p></div>
+<div class="feature reveal"><h3>Vos données restent les vôtres</h3><p>Aucun partage d'exemples entre clients. Vos messages approuvés entraînent uniquement votre agent. Conforme RGPD. Hébergement européen.</p></div>
+</div>
+</div>
+</section>
+<section class="voice-section">
+<div class="container">
+<div class="voice-grid">
+<div class="voice-text reveal">
+<div class="section-tag">Le différenciateur</div>
+<h2>Vos prospects ne sauront jamais<br><em>qu'une IA était impliquée.</em></h2>
+<p>L'agent apprend votre voix message après message. Vos tics de langage, votre rythme, vos formules. Au bout d'un mois, vos meilleurs clients ne distinguent plus vos messages écrits à la main de ceux draftés par l'agent.</p>
+<div class="voice-stat"><span class="num">85%</span><span>de drafts approuvés sans édition après 200 messages validés</span></div>
+</div>
+<div class="voice-mockup reveal">
+<div class="label">File de validation — 9h12</div>
+<div class="voice-msg">Sarah, j'ai vu votre levée chez Alan en mars. Bravo. Question rapide sur le scaling RH post-Série C : vous avez recruté combien depuis ? Je travaille avec 5-6 boîtes au même stade, certaines galèrent à structurer le people ops à 80+, d'autres y arrivent en gardant l'esprit early-stage. Curieux d'échanger 15 min si ça vous parle.</div>
+<div class="voice-actions"><button class="voice-btn voice-btn-primary">✓ Approuver</button><button class="voice-btn">✎ Éditer</button><button class="voice-btn">Skip</button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pricing">
+<div class="container">
+<div class="section-head reveal"><div class="section-tag">Tarifs</div><h2>Un investissement<br>qui se rembourse au premier deal.</h2><p>Sans engagement. Annulation en un clic. Économisez deux mois en payant à l'année.</p></div>
+<div class="pricing-grid">
+<div class="price-card reveal"><h3>Solo</h3><div class="tagline">Pour valider votre canal le plus performant.</div><div class="price">99€<span>/mois</span></div><div class="annual">990€/an, soit 2 mois offerts</div><ul><li>1 canal au choix (Email ou LinkedIn)</li><li>50 prospects qualifiés par jour</li><li>Entraînement de voix de base</li><li>Inbox de réponses classifiées</li><li>Support email sous 48h</li></ul><a href="#demo" class="btn btn-ghost">Commencer</a></div>
+<div class="price-card featured reveal"><span class="badge">Le plus choisi</span><h3>Pro</h3><div class="tagline">Pour les fondateurs qui font leur propre outbound.</div><div class="price">399€<span>/mois</span></div><div class="annual">3990€/an, soit 2 mois offerts</div><ul><li>Tous les canaux (Email, LinkedIn, X, Instagram, TikTok)</li><li>200 prospects qualifiés par jour</li><li>Entraînement de voix complet (3 couches)</li><li>Récupération sémantique sur 1000+ messages</li><li>Détection d'objections + drafts de réponse</li><li>Support prioritaire sous 4h</li></ul><a href="#demo" class="btn btn-primary">Choisir Pro</a></div>
+<div class="price-card reveal"><h3>Agency</h3><div class="tagline">Pour gérer plusieurs marques en parallèle.</div><div class="price">999€<span>/mois</span></div><div class="annual">9990€/an, soit 2 mois offerts</div><ul><li>Tout Pro, par client géré</li><li>Jusqu'à 5 marques distinctes</li><li>Voix séparée et isolée par marque</li><li>Tableau de bord agence</li><li>White-label disponible</li><li>Onboarding dédié + support direct</li></ul><a href="#demo" class="btn btn-ghost">Nous parler</a></div>
+</div>
+</div>
+</section>
+<section class="faq" id="faq">
+<div class="container">
+<div class="section-head reveal" style="margin-bottom:3rem"><div class="section-tag">Questions fréquentes</div><h2>Ce qu'on nous demande<br>avant de signer.</h2></div>
+<div class="faq-list">
+<details class="faq-item"><summary class="faq-q">Est-ce que mon compte LinkedIn risque d'être banni ?</summary><div class="faq-a">Non. Nous n'automatisons jamais LinkedIn côté serveur. Aucun mot de passe stocké. L'agent prépare votre message, vous cliquez "Copier + Ouvrir LinkedIn", vous collez vous-même dans votre navigateur. C'est vous qui envoyez, donc LinkedIn voit une activité humaine normale. 25 secondes par message, zéro risque de ban.</div></details>
+<details class="faq-item"><summary class="faq-q">Est-ce qu'on va sentir que c'est de l'IA ?</summary><div class="faq-a">Pas après les 50 premiers messages que vous validez. Chaque édition que vous faites entraîne l'agent. Au bout d'un mois, 85% de ses drafts passent sans modification. Vos meilleurs clients ne font plus la différence.</div></details>
+<details class="faq-item"><summary class="faq-q">Combien de temps pour configurer ?</summary><div class="faq-a">10 minutes chrono. Vous collez 3-5 emails que vous avez déjà écrits, vous décrivez votre client idéal, vous connectez votre email d'envoi. Pas de SSO complexe, pas de connecteur CRM obligatoire.</div></details>
+<details class="faq-item"><summary class="faq-q">Que se passe-t-il pour mes données ?</summary><div class="faq-a">Vos prospects et vos messages restent strictement isolés. Aucun partage d'exemples entre clients. Hébergement en France. Conforme RGPD. Suppression complète sur demande sous 48h.</div></details>
+<details class="faq-item"><summary class="faq-q">Puis-je annuler à tout moment ?</summary><div class="faq-a">Oui. Annulation en un clic depuis votre compte. Vous gardez l'accès jusqu'à la fin de la période payée. Aucune question, aucun email de rétention.</div></details>
+<details class="faq-item"><summary class="faq-q">Pourquoi pas un agent 100% autonome ?</summary><div class="faq-a">Parce que les outils SDR commodity le font déjà, et qu'ils détruisent les marques premium. Nos clients vendent à des décideurs qui détectent l'IA générique en trois secondes. La validation humaine, ce n'est pas un frein, c'est la condition pour rester crédible. 12 minutes par jour, c'est 4% du temps que vous passiez avant.</div></details>
+</div>
+</div>
+</section>
+<section class="final-cta" id="demo">
+<div class="container">
+<h2 class="reveal">Reprenez votre temps.<br>Sans abandonner votre voix.</h2>
+<p class="reveal">15 minutes de démo. Avec votre vraie liste de prospects. Vous repartez avec 10 messages draftés, gratuits, à votre image.</p>
+<a href="mailto:hello@luxuryconnect.fr?subject=Demande%20de%20d%C3%A9mo%20LuxuryConnect" class="btn btn-primary reveal">Réserver une démo</a>
+</div>
+</section>
+<footer>
+<div class="container">
+<div>© 2026 LuxuryConnect. Tous droits réservés.</div>
+<div class="footer-links"><a href="#pricing">Tarifs</a><a href="#faq">FAQ</a><a href="mailto:hello@luxuryconnect.fr">Contact</a><a href="#">Mentions légales</a><a href="#">RGPD</a></div>
+</div>
+</footer>
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const nav=document.querySelector('nav');
+window.addEventListener('scroll',()=>{nav.style.background=window.scrollY>50?'rgba(10,10,10,0.92)':'rgba(10,10,10,0.7)'});
+</script>
+</body>
+</html>
